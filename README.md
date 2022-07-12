@@ -1,4 +1,4 @@
-# MetaCyc爬虫脚本说明
+# MetaCyc爬虫脚本（crawl.py）说明
 
 1.  本地备份文件saved_full_class.csv及saved_used_class.csv，储存之前查询过的数据
 
@@ -24,7 +24,7 @@
 
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/crawl_result_example.jpg)
 
-# 下游分析示例
+# 下游分析示例(dif_ana.R)
 
 下游分析在R中进行，按照原本设计，used_class.csv第一二列为第一二层级，第三四列为倒数第二和倒数第一层级
 
