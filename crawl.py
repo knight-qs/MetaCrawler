@@ -37,7 +37,7 @@ path_f = 'C:\\Users\\hp\\Desktop\\python\\full_class.csv'
 path_u = 'C:\\Users\\hp\\Desktop\\python\\used_class.csv'
 path_sf = 'C:\\Users\\hp\\Desktop\\python\\saved_full_class.csv'
 path_su = 'C:\\Users\\hp\\Desktop\\python\\saved_used_class.csv'
-path_qp = 'C:\\Users\\hp\\Desktop\\python\\2019mcx_16S_MetaCyc_path_abun_unstrat.tsv'   # 查询文件在这里选择
+path_qp = 'C:\\Users\\hp\\Desktop\\python\\MetaCyc_path_abun_unstrat.tsv'   # 查询文件在这里选择
 
 # 从本地备份库中查询，写入
 def write_full(full_class):
