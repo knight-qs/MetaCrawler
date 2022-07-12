@@ -20,6 +20,8 @@
 
 10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
 
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/crawl_result_example.jpg)
+
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/sankey_T.jpg)
 
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/crawl_result_example.jpg)
+
