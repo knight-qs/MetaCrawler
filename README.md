@@ -22,7 +22,7 @@
 
 ↓这是爬取的完整层级信息结果full_class.csv，每行最后一位为对应的代谢通路，不同代谢通路层级深度不同
 
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/crawl_result_example.jpg)
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/crawl_result_example.jpg)
 
 # 下游分析示例(dif_ana.R)
 
@@ -32,6 +32,6 @@
 
 ↓而第一二列用于绘制桑基图，结果见下方右图
 
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/sankey_T.jpg)
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/sankey_T.jpg)
 
 
