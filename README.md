@@ -27,7 +27,9 @@
 # 下游分析示例
 
 下游分析在R中进行，按照原本设计，used_class.csv第一二列为第一二层级，第三四列为倒数第二和倒数第一层级
+
 其中三四列准备在差异分析后绘制火山图，再使用clusterprofiler富集分析，但结果不好，猜测是因为MetaCyc结果相对KEGG少的多，因此没有放图，相关代码在dif_ana.R中有
+
 ↓而第一二列用于绘制桑基图，结果见下图
 
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/sankey_T.jpg)
