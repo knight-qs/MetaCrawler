@@ -302,13 +302,3 @@ is_phantomjs_installed()
 
 saveNetwork(sankey_T,"sankey_T.html")
 webshot("sankey_T.html" , "sankey_T_ITS.pdf")
-
-
-
-
-
-
-
-
-
-
