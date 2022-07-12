@@ -19,3 +19,5 @@
 9.  若担心备份数据有误、陈旧，可在脚本运行的开头选择删除本地备份，如此便只会从MetaCyc爬取数据
 
 10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
+
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/sankey_T.jpg)
