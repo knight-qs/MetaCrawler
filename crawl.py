@@ -8,37 +8,37 @@ import random
 #   脚本运行准备工作1：定义文件路径及函数
 ###############################################>>>>>>>>>>>>>>>>>>>>>
 
-path_f = 'C:\\Users\\hp\\Desktop\\python\\full_class.csv'
-path_u = 'C:\\Users\\hp\\Desktop\\python\\used_class.csv'
-path_sf = 'C:\\Users\\hp\\Desktop\\python\\saved_full_class.csv'
-path_su = 'C:\\Users\\hp\\Desktop\\python\\saved_used_class.csv'
-path_qp = 'C:\\Users\\hp\\Desktop\\python\\query_ITS_MetaCyc_path_abun_unstrat.tsv'   # 查询文件在这里选择
+path_f = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\full_class.csv'
+path_u = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\used_class.csv'
+path_sf = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\saved_full_class.csv'
+path_su = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\saved_used_class.csv'
+path_qp = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\query_ITS_MetaCyc_path_abun_unstrat.tsv'   # 查询文件在这里选择
 
 # 从本地备份库中查询，写入
 def write_full(full_class):
-    with open ('full_class.csv', 'a') as full_class_csvfile:
+    with open (path_f, 'a') as full_class_csvfile:
         full_class_csvfile.writelines([line+'\n'+'\n' for line in full_class])
 def write_used(used_class):
-    with open ('used_class.csv', 'a') as used_class_csvfile:
+    with open (path_u, 'a') as used_class_csvfile:
         used_class_csvfile.writelines([line+'\n'+'\n' for line in used_class])
 
 # 写入爬取所得数据
 def write_full_csv(full_class):
-    with open('full_class.csv', 'a') as full_class_csvfile:
+    with open(path_f, 'a') as full_class_csvfile:
         full = csv.writer(full_class_csvfile)
         full.writerow(full_class)
 def write_used_csv(used_class):
-    with open('used_class.csv', 'a') as used_class_csvfile:
+    with open(path_u, 'a') as used_class_csvfile:
         used = csv.writer(used_class_csvfile)
         used.writerow(used_class)
 
 # 爬取过程中添加本地备份
 def write_saved_full_csv(full_class):
-    with open('saved_full_class.csv', 'a') as saved_full_class_csvfile:
+    with open(path_sf, 'a') as saved_full_class_csvfile:
         full = csv.writer(saved_full_class_csvfile)
         full.writerow(full_class)
 def write_saved_used_csv(used_class):
-    with open('saved_used_class.csv', 'a') as saved_used_class_csvfile:
+    with open(path_su, 'a') as saved_used_class_csvfile:
         used = csv.writer(saved_used_class_csvfile)
         used.writerow(used_class)
 
@@ -59,9 +59,9 @@ if os.path.exists(path_sf) or os.path.exists(path_su):
         choice = input('是否删除本地备份数据(y/n):')
         if choice == 'y':
             if os.path.exists(path_sf):
-                os.remove("saved_full_class.csv")
+                os.remove(path_sf)
             if os.path.exists(path_su):
-                os.remove("saved_used_class.csv")
+                os.remove(path_su)
             break
         elif choice == 'n':
             break
@@ -284,7 +284,7 @@ for pathway in pa:      # 需注意Picrust2预测出的通路少数在MetaCyc中
     
     # 通过捕获错误保证程序不间断运行，若遇其它类型错误，中断程序以排查问题
     except requests.exceptions.ConnectionError:
-        print('ConnectionError -- 可能由于请求过频繁或其它因素，爬虫似乎受到了网站限制，1min后将尝试重新爬取')
+        print('ConnectionError -- 可能由于请求过频繁，或VPN未关闭，或其它因素，爬虫访问网站似乎受到了限制，1min后将尝试重新爬取')
         time.sleep(60)
     except requests.exceptions.Timeout:
         print('Timeout -- 爬虫在30s内仍未连接到网站服务器，10s后将尝试重新爬取')
