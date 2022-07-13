@@ -20,6 +20,12 @@
 
 10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
 
+记得关闭VPN
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20not%20closed.jpg)
+
+关闭VPN后，脚本正常运行
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN closed.jpg)
+
 下图为爬取的完整层级信息结果full_class.csv，每行最后一位为对应的代谢通路，不同代谢通路层级深度不同
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/crawl_result_example.jpg)
 
