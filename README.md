@@ -24,7 +24,7 @@
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20not%20closed.jpg)
 
 关闭VPN后，脚本正常运行
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN closed.jpg)
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20closed.jpg)
 
 下图为爬取的完整层级信息结果full_class.csv，每行最后一位为对应的代谢通路，不同代谢通路层级深度不同
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/crawl_result_example.jpg)
