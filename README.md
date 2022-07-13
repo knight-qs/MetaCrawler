@@ -1,4 +1,4 @@
-# MetaCyc爬虫脚本（crawl.py）说明
+## 爬虫crawler.py 说明
 
 1.  本地备份文件saved_full_class.csv及saved_used_class.csv，储存之前查询过的数据
 
@@ -18,46 +18,81 @@
 
 9.  若担心备份数据有误、陈旧，可在脚本运行的开头选择删除本地备份，如此便只会从MetaCyc爬取数据
 
-10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
+<br>
 
-记得关闭VPN
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20not%20closed.jpg)
-一开始是没有本地备份库的，因此这里把之前备份删掉，模拟刚开始使用该脚本，全部层级信息都需要爬取的情况
+使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
+```
+path_f = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\full_class.csv'
+path_u = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\used_class.csv'
+path_sf = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\saved_full_class.csv'
+path_su = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\saved_used_class.csv'
+path_qp = 'D:\\R\\MetaCyc-Crawl-main\\python_file\\query_ITS_MetaCyc_path_abun_unstrat.tsv'   # 查询文件在这里选择
+```
 
-关闭VPN后，脚本正常运行
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20closed.jpg)
+<br>
+
+查询文件格式如下
+```
+ANAGLYCOLYSIS-PWY
+ARGSYN-PWY
+CALVIN-PWY
+```
+
+<br>
+
+假如本地有备份，会询问下列问题，具体解释见上方说明
+```
+是否删除本地备份数据(y/n):
+```
+
+<br>
 
 爬取的完整层级信息结果full_class.csv，每行最后一位为对应的代谢通路，不同代谢通路层级深度不同
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/full_class.jpg)
+```
+Generation of Precursor Metabolites and Energy,Glycolysis,ANAGLYCOLYSIS-PWY
+
+Biosynthesis,Amino Acid Biosynthesis,Proteinogenic Amino Acid Biosynthesis,L-arginine Biosynthesis,ARGSYN-PWY
+
+Superpathways,ARGSYN-PWY
+
+Biosynthesis,Carbohydrate Biosynthesis,Sugar Biosynthesis,CALVIN-PWY
+
+Degradation/Utilization/Assimilation,C1 Compound Utilization and Assimilation,CO2 Fixation,Autotrophic CO2 Fixation,CALVIN-PWY
+```
+
+<br>
 
 用于下游分析的层级信息结果used_class.csv
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/used_class.jpg)
+```
+Generation of Precursor Metabolites and Energy,Glycolysis,Glycolysis,ANAGLYCOLYSIS-PWY
 
-同步保存的完整层级信息结果saved_full_class.csv
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/saved_full_class.jpg)
+Biosynthesis,Amino Acid Biosynthesis,L-arginine Biosynthesis,ARGSYN-PWY
 
-同步保存的用于下游分析的层级信息结果saved_used_class.csv
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/saved_used_class.jpg)
+Superpathways,ARGSYN-PWY,Superpathways,ARGSYN-PWY
 
-使用刚刚生成的备份，再本地查询一次，瞬间完成
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query.jpg)
+Biosynthesis,Carbohydrate Biosynthesis,Sugar Biosynthesis,CALVIN-PWY
 
-使用saved_full_class.csv，进行本地查询，结果与爬取相同
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query_full_class.jpg)
+Degradation/Utilization/Assimilation,C1 Compound Utilization and Assimilation,Autotrophic CO2 Fixation,CALVIN-PWY
+```
 
-使用saved_used_class.csv，进行本地查询，结果与爬取相同
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query_used_class.jpg)
+<br>
 
-# 下游分析示例(dif_ana.R)
+## 下游分析dif_ana.R说明
 
-下游分析在R中进行，按照原本设计，used_class.csv第一二列为第一二层级，第三四列为倒数第二和倒数第一层级，各有不同目的
-
-三四列准备在差异分析后绘制火山图，再使用clusterprofiler富集分析，但结果不好，猜测是因为MetaCyc结果相对KEGG少的多，因此没有放图，相关代码在dif_ana.R中有
-
-一二列用于绘制桑基图，直出效果见下图
+下游分析在R中进行
+<br><br>
+按照原本设计，used_class.csv第一二列为第一二层级，第三四列为倒数第二和倒数第一层级，各有不同目的
+<br><br><br>
+三四列准备在差异分析后绘制火山图，再使用clusterprofiler富集分析
+<br><br>
+但结果不好，猜测是因为MetaCyc结果相对KEGG少的多，因此不做展示，相关代码可在dif_ana.R中查看
+<br><br><br>
+一二列用于绘制桑基图，直出效果如下
+<br><br>
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/raw_fig.jpg)
-
-使用Adobe Illustrator调整，最终效果见下方右图
+<br><br><br>
+使用Adobe Illustrator调整，最终效果如下（右图）
+<br><br><br>
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/sankey_T.jpg)
 
 
