@@ -41,10 +41,10 @@
 使用刚刚生成的备份，再本地查询一次，瞬间完成
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query.jpg)
 
-使用saved_full_class.csv，进行本地查询
+使用saved_full_class.csv，进行本地查询，结果与爬取相同
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query_full_class.jpg)
 
-使用saved_used_class.csv，进行本地查询
+使用saved_used_class.csv，进行本地查询，结果与爬取相同
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query_used_class.jpg)
 
 # 下游分析示例(dif_ana.R)
