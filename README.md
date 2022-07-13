@@ -20,7 +20,7 @@
 
 10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
 
-记得关闭VPN
+记得关闭VPN（一开始是没有本地备份库的，因此把之前备份删掉，模拟刚开始使用该脚本，全部层级信息都需要爬取的情况）
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20not%20closed.jpg)
 
 关闭VPN后，脚本正常运行
@@ -37,6 +37,15 @@
 
 同步保存的用于下游分析的层级信息结果saved_used_class.csv
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/saved_used_class.jpg)
+
+使用刚刚生成的备份，再本地查询一次，瞬间完成
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query.jpg)
+
+使用saved_full_class.csv，进行本地查询
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query_full_class.jpg)
+
+使用saved_used_class.csv，进行本地查询
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/local_query_used_class.jpg)
 
 # 下游分析示例(dif_ana.R)
 
