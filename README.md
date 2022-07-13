@@ -33,7 +33,7 @@
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/used_class.jpg)
 
 同步保存的完整层级信息结果saved_full_class.csv
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/savedfull_class.jpg)
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/saved_full_class.jpg)
 
 同步保存的用于下游分析的层级信息结果saved_used_class.csv
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/saved_used_class.jpg)
