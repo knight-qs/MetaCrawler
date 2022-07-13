@@ -1,7 +1,5 @@
 # MetaCyc爬虫脚本（crawl.py）说明
 
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/metacrawl_icon.jpg)
-
 1.  本地备份文件saved_full_class.csv及saved_used_class.csv，储存之前查询过的数据
 
 2.  若无备份，则不会在开头询问是否删除，将自动新建，并随脚本在MetaCyc上的爬取结果自动更新
