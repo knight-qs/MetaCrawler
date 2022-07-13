@@ -21,8 +21,8 @@
 10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
 
 记得关闭VPN
-（一开始是没有本地备份库的，因此这里把之前备份删掉，模拟刚开始使用该脚本，全部层级信息都需要爬取的情况）
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20not%20closed.jpg)
+一开始是没有本地备份库的，因此这里把之前备份删掉，模拟刚开始使用该脚本，全部层级信息都需要爬取的情况
 
 关闭VPN后，脚本正常运行
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/VPN%20closed.jpg)
