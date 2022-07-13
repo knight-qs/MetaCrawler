@@ -32,7 +32,7 @@
 而第一二列用于绘制桑基图，直出效果见下图
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/raw_fig.jpg)
 
-使用Adobe Illustrator修饰，最终效果见下方右图
+使用Adobe Illustrator调整，最终效果见下方右图
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/sankey_T.jpg)
 
 
