@@ -20,8 +20,7 @@
 
 10. 使用爬虫脚本时，记得修改开头的本地路径，并把查询文件换成自己的待查询MetaCyc代谢通路
 
-↓这是爬取的完整层级信息结果full_class.csv，每行最后一位为对应的代谢通路，不同代谢通路层级深度不同
-
+下图爬取的完整层级信息结果full_class.csv，每行最后一位为对应的代谢通路，不同代谢通路层级深度不同
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/crawl_result_example.jpg)
 
 # 下游分析示例(dif_ana.R)
@@ -30,10 +29,10 @@
 
 其中三四列准备在差异分析后绘制火山图，再使用clusterprofiler富集分析，但结果不好，猜测是因为MetaCyc结果相对KEGG少的多，因此没有放图，相关代码在dif_ana.R中有
 
-↓而第一二列用于绘制桑基图，直出结果见下方
-![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/raw_fig.jpg）
+而第一二列用于绘制桑基图，直出结果见下图
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/raw_fig.jpg)
 
-使用Adobe Illustrator修饰，结果见下方右图
+使用Adobe Illustrator修饰，最终结果见下方右图
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/sankey_T.jpg)
 
 
