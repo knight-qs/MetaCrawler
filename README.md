@@ -87,12 +87,17 @@ Degradation/Utilization/Assimilation,C1 Compound Utilization and Assimilation,Au
 <br><br>
 但结果不好，猜测是因为MetaCyc结果相对KEGG少的多，因此不做展示，相关代码可在dif_ana.R中查看
 <br><br><br>
-一二列用于绘制桑基图，直出效果如下
-<br><br>
+
+#### 一二列用于绘制桑基图，直出效果如下
+
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/raw_fig.jpg)
-<br><br><br>
-使用Adobe Illustrator调整，最终效果如下（右图）
-<br><br><br>
+
+<br><br>
+
+#### 使用Adobe Illustrator调整，最终效果如下（右图）
+
+<br>
+
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/sankey_T.jpg)
 
 
