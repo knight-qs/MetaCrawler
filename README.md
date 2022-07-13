@@ -30,13 +30,13 @@
 ![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/full_class.jpg)
 
 用于下游分析的层级信息结果used_class.csv
-![image]()
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/used_class.jpg)
 
 同步保存的完整层级信息结果saved_full_class.csv
-![image]()
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/savedfull_class.jpg)
 
 同步保存的用于下游分析的层级信息结果saved_used_class.csv
-![image]()
+![image](https://github.com/knight-qs/MetaCyc-Crawl/blob/main/fig/saved_used_class.jpg)
 
 # 下游分析示例(dif_ana.R)
 
